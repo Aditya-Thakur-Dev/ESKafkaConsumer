@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: kafkaConsumer
+      bindings:
+        kafkaConsumer-in-0:
+          destination: es.sample.project.topic
+          group: kfkv
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+server:
+  port: 8686
+
+
